@@ -30,9 +30,9 @@ public class QuadScript : MonoBehaviour
     if (mDelay <=0)
     {
       GameObject go = Instantiate(Resources.Load<GameObject>("Projectile"));
-      go.transform.position = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-3f, -1f));
+      go.transform.position = new Vector3(Mathf.FloorToInt(Random.Range(-1f, 1f) * 10) / 10f, Mathf.FloorToInt(Random.Range(-1f, 1f) * 10) / 10f, Mathf.FloorToInt(Random.Range(-0.5f, -0.1f) * 10) / 10f);
 
-      mDelay = 0.5f;
+      mDelay = 0.25f;
     }
 
   }
@@ -53,8 +53,7 @@ public class QuadScript : MonoBehaviour
 
       if (hitit)
       {
-        Debug.Log("Hit Object " + hit.collider.gameObject.name);
-        Debug.Log("Hit Texture coordinates = " + hit.textureCoord.x + "," + hit.textureCoord.y);
+        Debug.Log("Hit Object " + hit.collider.gameObject.name + " at: " + hit.textureCoord.x + "," + hit.textureCoord.y);
         addHitPoint(hit.textureCoord.x*4-2, hit.textureCoord.y*4-2);
       }
       Destroy(cp.otherCollider.gameObject);
@@ -65,7 +64,7 @@ public class QuadScript : MonoBehaviour
   {
     mPoints[mHitCount * 3] = xp;
     mPoints[mHitCount * 3 + 1] = yp;
-    mPoints[mHitCount * 3 + 2] = Random.Range(1f, 3f);
+    mPoints[mHitCount * 3 + 2] = 3f;
 
     mHitCount++;
     mHitCount %= 32;

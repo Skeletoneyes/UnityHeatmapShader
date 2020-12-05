@@ -120,7 +120,8 @@
 
               float3 color_contribution = color_range * ratio_over_lower_point;
 
-              float3 new_color = colors[i - 1] + color_contribution;
+              float3 new_color = colors[i - 1];
+              //float3 new_color = colors[0];
               return new_color;
 
             }
@@ -151,9 +152,9 @@
             float2 work_pt = float2(_Hits[i * 3], _Hits[i * 3 + 1]);
             float pt_intensity = _Hits[i * 3 + 2];
 
-            totalWeight += 0.5 * distsq(uv, work_pt) * pt_intensity * _Strength * (1 + sin(_Time.y * _PulseSpeed));
+            totalWeight += 0.5 * distsq(uv, work_pt) * pt_intensity * _Strength;
           }
-          return col + float4(getHeatForPixel(totalWeight), .5);
+          return col + float4(getHeatForPixel(totalWeight), 1);
         }
 
 

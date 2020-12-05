@@ -376,8 +376,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -401,7 +401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -419,6 +419,10 @@ PrefabInstance:
       value: Projectile
       objectReference: {fileID: 0}
     - target: {fileID: 2473054265436000634, guid: 592f1cb58b4f12c4ab3b66db1f9b8392, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473054265436000634, guid: 592f1cb58b4f12c4ab3b66db1f9b8392, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -431,6 +435,10 @@ PrefabInstance:
       value: -1.139
       objectReference: {fileID: 0}
     - target: {fileID: 2473054265436000634, guid: 592f1cb58b4f12c4ab3b66db1f9b8392, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473054265436000634, guid: 592f1cb58b4f12c4ab3b66db1f9b8392, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -441,14 +449,6 @@ PrefabInstance:
     - target: {fileID: 2473054265436000634, guid: 592f1cb58b4f12c4ab3b66db1f9b8392, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473054265436000634, guid: 592f1cb58b4f12c4ab3b66db1f9b8392, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473054265436000634, guid: 592f1cb58b4f12c4ab3b66db1f9b8392, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2473054265436000634, guid: 592f1cb58b4f12c4ab3b66db1f9b8392, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
